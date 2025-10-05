@@ -20,6 +20,6 @@ public class endpointsTest {
     public void testeEndpoint() throws Exception {
         mockMvc.perform(get("/teste"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Check no console!"));
+                .andExpect(content().string("Check no console! 2.0"));
     }
 }
