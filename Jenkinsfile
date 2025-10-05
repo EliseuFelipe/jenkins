@@ -32,6 +32,7 @@ pipeline {
         stage('Run Container (opcional)') {
             steps {
                 script {
+                    sh 'docker rm -f meuapp || true'  // força remoção se existir
                     sh 'docker run -d -p 8080:8080 --name meuapp meuapp:1.0'
                 }
             }
