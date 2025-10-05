@@ -9,6 +9,6 @@ public class endpoints {
     @GetMapping("/teste")
     public String teste() {
         System.out.println("Endpoint /teste foi chamado!");
-        return "Check no console!";
+        return "Check no console! 2.0";
     }
 }
