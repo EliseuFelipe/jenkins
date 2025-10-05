@@ -2,13 +2,14 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven_3.9'   // Nome da instalação do Maven configurada no Jenkins
-        jdk 'JDK_17'        // Nome da instalação do JDK configurada no Jenkins
+        maven 'Maven_3.9'
+        jdk 'JDK_17'
     }
 
     stages {
         stage('Checkout') {
             steps {
+                deleteDir() // limpa o workspace antes do clone
                 git branch: 'main',
                     url: 'https://github.com/EliseuFelipe/jenkins.git'
             }
